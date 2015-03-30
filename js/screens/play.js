@@ -7,12 +7,11 @@ game.PlayScreen = me.ScreenObject.extend({
 		game.data.score = 0;
                 me.levelDirector.loadLevel("level01");
                 
+                this.resetPlayer(0, 420);
+                
                 var gamemanager = me.pool.pull("GameManager", 0, 0, {});
                 me.game.world.addChild(gamemanager, 0);
 
-                var player = me.pool.pull("player", 0, 420, {});
-                me.game.world.addChild(player, 5);
-                
                 me.input.bindKey(me.input.KEY.RIGHT, "right");
                 me.input.bindKey(me.input.KEY.LEFT, "left");
                 me.input.bindKey(me.input.KEY.SPACE, "jump");
@@ -30,5 +29,10 @@ game.PlayScreen = me.ScreenObject.extend({
 	onDestroyEvent: function() {
 		// remove the HUD from the game world
 		me.game.world.removeChild(this.HUD);
-	}
+	},
+        
+        resetPlayer: function (x, y){
+            game.data.player = me.pool.pull("player", x, y, {});
+            me.game.world.addChild(game.data.player, 5);
+        }
 });
