@@ -19,7 +19,7 @@ game.TitleScreen = me.ScreenObject.extend({
                }
             })));
             
-            this.handler = me.event.suscribe(me.event.KEYDOWN, function(action, keyCode, edge){
+            this.handler = me.event.subscribe(me.event.KEYDOWN, function(action, keyCode, edge){
                 if (action === "start"){
                     me.state.change(me.state.PLAY);
                 }
@@ -34,6 +34,6 @@ game.TitleScreen = me.ScreenObject.extend({
 	 */
 	onDestroyEvent: function() {
 		me.input.unbindKey(me.input.KEY.ENTER); // TODO
-                me.event.unsuscribe(this.handler);
+                me.event.unsubscribe(this.handler);
 	}
 });
