@@ -66,7 +66,7 @@ game.PlayerEntity = me.Entity.extend({
     
     checkIfDead: function(){
         if(this.health <= 0){
-           this.dead = true;
+           return true;
        }
        return false;
     },
@@ -79,7 +79,7 @@ game.PlayerEntity = me.Entity.extend({
         }else {
             this.body.vel.x = 0;
         }
-        if (me.input.isKeyPressed("jump")&& !this.jumping && !this.falling){
+        if (me.input.isKeyPressed("jump")&& !this.body.jumping && !this.body.falling){
             this.jump();
         }
         
@@ -102,7 +102,7 @@ game.PlayerEntity = me.Entity.extend({
     },
     
     jump: function(){
-      this.jumping = true;
+      this.body.jumping = true;
       this.body.vel.y -= this.body.accel.y * me.timer.tick;  
     },
     
@@ -130,7 +130,8 @@ game.PlayerEntity = me.Entity.extend({
     },
     
     collideHandler: function(response){
-        if(response.b.type === 'EnemyBase'){
+        console.log(response.b.type);
+        if(response.b.type === 'EnemyBaseEntity'){
             this.collideWithEnemyBase(response);
         }else if(response.b.type === 'EnemyCreep'){
             this.collideWithEnemyCreep(response);

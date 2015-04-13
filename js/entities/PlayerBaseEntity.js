@@ -15,7 +15,7 @@ game.PlayerBaseEntity = me.Entity.extend({
         this.health = game.data.playerBaseHealth;
         this.alwaysUpdate = true;
         this.body.onCollision = this.onCollision.bind(this);
-        this.type = "PlayeBase";
+        this.type = "PlayerBase";
         
         this.renderable.addAnimation("idle", [0]);
         this.renderable.addAnimation("broken", [1]);
