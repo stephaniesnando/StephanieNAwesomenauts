@@ -1,4 +1,4 @@
-game.Spendexp = me.ScreenObject.extend({
+game.SpendExp = me.ScreenObject.extend({
 	/**	
 	 *  action to perform on state change
 	 */
