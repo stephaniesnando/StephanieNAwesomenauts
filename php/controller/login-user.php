@@ -23,6 +23,8 @@
            $array["exp2"] = $row["exp2"];
            $array["exp3"] = $row["exp3"];
            $array["exp4"] = $row["exp4"];
+           $_SESSION["name"] = $username;
+           
            // If the correct password is inputted, then a message will be echoed ehich will say "Login successful"
            echo json_encode($array);
        }
