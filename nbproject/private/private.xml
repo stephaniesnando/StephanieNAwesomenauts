@@ -12,14 +12,9 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/StephanieNAwesomenauts/js/screens/spendExp.js</file>
-            <file>file:/C:/xampp/htdocs/StephanieNAwesomenauts/js/resources.js</file>
-            <file>file:/C:/xampp/htdocs/StephanieNAwesomenauts/js/screens/play.js</file>
-            <file>file:/C:/xampp/htdocs/StephanieNAwesomenauts/js/screens/loadProfile.js</file>
-            <file>file:/C:/xampp/htdocs/StephanieNAwesomenauts/js/game.js</file>
-            <file>file:/C:/xampp/htdocs/StephanieNAwesomenauts/js/screens/title.js</file>
-            <file>file:/C:/xampp/htdocs/StephanieNAwesomenauts/index.php</file>
-            <file>file:/C:/xampp/htdocs/StephanieNAwesomenauts/js/screens/newProfile.js</file>
+            <file>file:/C:/xampp/htdocs/StephanieNAwesomenauts/php/controller/save-user.php</file>
+            <file>file:/C:/xampp/htdocs/StephanieNAwesomenauts/php/controller/create-user.php</file>
+            <file>file:/C:/xampp/htdocs/StephanieNAwesomenauts/php/controller/login-user.php</file>
         </group>
     </open-files>
 </project-private>
