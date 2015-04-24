@@ -91,6 +91,33 @@
 				}
 			});
 		</script>
-	</body>
+                
+                <script> 
+                    $query("#mainmenu").bind("click", function(){
+                       me.state.change(me.state.MENU);
+                    });
+                    $query("#register").bind("click", function(){
+                       $.ajax({
+                          type: "POST",
+                          url: "php/controller/create-user.php",
+                          data: {
+                              username: $('#username').val(),
+                              password: $('#passwoord').val()
+                          },
+                          dataType: "text"
+                       })
+                       .success(function(response){
+                          if(response === "true"){
+                              me.state.change(me.state.PLAY);
+                          }else{
+                              alert(response);
+                          }
+                       })
+                       .fail(function(response){
+                          alert: ("Fail"); 
+                       });
+                    });
+                </script>
+        </body>
 </html>
 
