@@ -30,9 +30,9 @@
        }
        else{
            // If not, then another message will be echoed which will say the following. And it says "usernamecand password" so that it wont hint at if the user is a hacker.
-           echo "<p>Invalid username and password. </p>";
+           echo "Invalid username and password.";
        }
     }
     else {
-        echo "<p>Invalid username and password. </p>";
+        echo "Invalid username and password.";
     }
