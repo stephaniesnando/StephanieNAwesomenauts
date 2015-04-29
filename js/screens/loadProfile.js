@@ -20,7 +20,7 @@ game.LoadProfile = me.ScreenObject.extend({
                   this.font = new me.Font("Arial", 26, "white");
                   
                },
-               
+               //this literallly draws the "enter username and password text..
                draw: function(renderer){
                   this.font.draw(renderer.getContext(), "ENTER YOUR USERNAME AND PASSWORD", this.pos.x, this.pos.y);
                }

@@ -15,7 +15,7 @@ game.TitleScreen = me.ScreenObject.extend({
                },
                
                draw: function(renderer){
-                  this.font.draw(renderer.getContext(), "START A NEW GAME", this.pos.x, this.pos.y); 
+                   this.font.draw(renderer.getContext(), "START A NEW GAME", this.pos.x, this.pos.y); 
                },
                
                update: function(dt){

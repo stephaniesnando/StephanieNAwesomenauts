@@ -29,10 +29,11 @@
            echo json_encode($array);
        }
        else{
-           // If not, then another message will be echoed which will say the following. And it says "usernamecand password" so that it wont hint at if the user is a hacker.
+           // If not, then another message will be echoed which will say the following. And it says "username and password" so that it wont hint at if the user is a hacker.
            echo "Invalid username and password.";
        }
     }
     else {
+        //same thing going on as above
         echo "Invalid username and password.";
     }
