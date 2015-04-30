@@ -11,3 +11,5 @@ game.HeroDeathManager = Object.extend({
     }
 });
 
+//dont know what's going on in this page either...
+

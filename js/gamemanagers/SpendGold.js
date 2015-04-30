@@ -14,8 +14,10 @@ game.SpendGold = Object.extend({
       if(me.input.isKeyPressed("buy") && this.now-this.lastBuy >= 1000){
           this.lastBuy = this.now;
           if(!this.buying){
+              //so if the player hits the "buy" key is pressed (which is the B key) then it will  buy
               this.startBuying();
           }else{
+              //if not,  the  it won't be buying anything
               this.stopBuying();
           }
       } 
@@ -80,30 +82,38 @@ game.SpendGold = Object.extend({
    },
    
    checkBuyKeys: function(){
+       // so basically if any of these keys are pressed then whatever skill the key stands for  will be bought.
+       // so F1 would increase daamage
        if(me.input.isKeyPressed("F1")){
           if(this.checkCost(1)){
               this.makePurchase(1);
           } 
+          //F2 will make the player run faster
        }else if(me.input.isKeyPressed("F2")){
            if(this.checkCost(2)){
               this.makePurchase(2);
           } 
+          //F3 Increases health 
        }else if(me.input.isKeyPressed("F3")){
            if(this.checkCost(3)){
               this.makePurchase(3);
           } 
+          //F4 is speed burst
        }else if(me.input.isKeyPressed("F4")){
            if(this.checkCost(4)){
               this.makePurchase(4);
           } 
+          //F5 is eat the creep
        }else if(me.input.isKeyPressed("F5")){
            if(this.checkCost(5)){
               this.makePurchase(5);
           } 
+          //F6 is throw your spear
        }else if(me.input.isKeyPressed("F6")){
            if(this.checkCost(6)){
               this.makePurchase(6);
           } 
+          //now these would actually be pretty cool if i made it all work...
        }
    },
    

@@ -5,11 +5,13 @@ game.ExperienceManager = Object.extend({
    },
    
    update: function(){
+       //okay so this will look at the data stuff and if we win obviously rhere will be a message alerting that you won.
        if(game.data.win === true && !this.gameover){
            this.gameOver(true);
            alert ("YOU WIN!");
        }else if(game.data.win === false && !this.gameover){
            this.gameOver(false);
+           //vise versa for if you lose
            alert ("YOU LOSE!");
        }
        
@@ -19,11 +21,13 @@ game.ExperienceManager = Object.extend({
    gameOver: function(win){
        if(win){
         game.data.exp += 10;   
+        //if the player wins then wew gain 10 ppoints of experience
        }else{
         game.data.exp += 1; 
+        //if the player loses we only get 1 point
        }
        this.gameover = true;
-       me.save.exp = game.data.exp;
+       me.save.exp = game.data.exp; //saves the experience
        
             $.ajax({
             type: "POST",
